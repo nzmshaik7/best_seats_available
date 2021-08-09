@@ -14,19 +14,19 @@ from left to right.
                             "a1"=>{"id"=>"a1", "row"=>"a", "column"=>1, "status"=>"AVAILABLE"}, "a7"=>{"id"=>"a7", "row"=>"a", "column"=>7, "status"=>"AVAILABLE"}}, 
                   "total_seats_requested" => 7}
 
---> venue: Includes the number of rows and columns
---> seats: Include the list of seats with row, column positions and status
+--> venue: Includes the number of rows and columns<br />
+--> seats: Include the list of seats with row, column positions and status<br />
 --> total_seats_requested: Group of seats user requested. If user request 3 seats, we should return 3 adjacent seats from the same row.
 
 * Sample Output: An array of the best seats.
 
 * Process:
-    --> Best seat(s) are calculated based on the summation horizontal and vertical distance of set of node(s)(seat) from pivot(the front-middle seat). The distance is assigned as a weight of that set node.
-    --> The set node with minimum weight is the best seat(s) possible. 
-    --> In case of multiple sets of nodes with same minimum weight, preference is given to front-left set.
+    --> Best seat(s) are calculated based on the summation horizontal and vertical distance of set of node(s)(seat) from pivot(the front-middle seat). The distance is assigned as a weight of that set node.<br />
+    --> The set node with minimum weight is the best seat(s) possible. <br />
+    --> In case of multiple sets of nodes with same minimum weight, preference is given to front-left set.<br />
 * Notes:
-    --> This application can process a single seat request and a group of seats request. 
-    --> Weightage of '1' is given to the FRONT and MIDDLE for equal priority. We can change this weightage to prioritize one over the other. 
+    --> This application can process a single seat request and a group of seats request. <br />
+    --> Weightage of '1' is given to the FRONT and MIDDLE for equal priority. We can change this weightage to prioritize one over the other.<br /> 
 
 Technical Information:
 
@@ -35,8 +35,8 @@ Technical Information:
 * To Run Tests: In terminal, go to the application directory and run the following:
 rspec ./spec/controllers/v1/seats_controller_spec.rb
 
-* Deployment instructions: In terminal, go to the application directory and run the following:
-bundle install
-rails db:create db:migrate
-rails s
+* Deployment instructions: In terminal, go to the application directory and run the following:<br />
+bundle install<br />
+rails db:create db:migrate<br />
+rails s<br />
 
